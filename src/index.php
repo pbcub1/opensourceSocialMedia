@@ -5,7 +5,7 @@
 	class App{
 		//Constants
 		public const $appName = "Social networking website";
-		public const $appVersion = 0.0.1
+		public const $appVersion = 0.0.1;
 
 		//Constructor
 		public __construct() {
@@ -40,7 +40,23 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title><?php echo $app->appName;?></title>
+		<!--Generate title based off of App name constant-->
+		<title>Home | <?php echo $app->appName; ?></title>
+
+		<!--Meta Tags-->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="title" content="Home | <?php echo $app->appName; ?>" />
+		<meta name="description" content="This is a Facebook like app. This app is not meant to be a competitor to Facebook, only a cool portfolio piece." />
+		<meta name="author" content="David Green" />
+		<meta name="version" content="<?php echo $app->appVersion; ?>" />
+		<meat name="keywords" content="" />
+
+		<!--Stylesheets-->
+		<!--Scripts-->
 	</head>
-	<body></body>
+
+	<body>
+		
+	</body>
 </html>
