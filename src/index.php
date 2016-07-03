@@ -1,45 +1,9 @@
 <?php
-	//This is where the database functions are stored.
 	require_once 'lib/db.php';
 	require_once 'lib/app.php';
 	require_once 'lib/generator.php';
 
 	//TODO: Look to see if appData has been serialized in session, if not, then instatiate another one
-
-	//TODO: Put this in it's own dedicated file and require it
-	class App{
-		//Constants
-		public static const $appName = "Social networking website";
-		public static const $appVersion = 0.0.1;
-
-		//Constructor
-		public __construct() {
-			//Open database
-
-			//TODO: Brainstorm what session variables to look for.
-			//if session profile variable exist
-				//get session entry based off session ID
-				//if not expired
-					//if type is session
-						//generate feed page
-					//else
-						//generate logon page
-				//else
-					//generate logon page
-			//else if cookie variables exist
-				//get session entry based off cookie's session ID
-				//if not expired
-					//if type is cookie
-						//create session variables
-						//generate feed page
-					//else
-						//generate logon page
-				//else
-					//generate logon page
-			//else
-				//generate logon page
-		}
-	}
 
 	$app = new App();
 ?>
