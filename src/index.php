@@ -1,6 +1,10 @@
 <?php
 	//This is where the database functions are stored.
-	require 'lib/db.php';
+	require_once 'lib/db.php';
+	require_once 'lib/app.php';
+	require_once 'lib/generator.php';
+
+	//TODO: Look to see if appData has been serialized in session, if not, then instatiate another one
 
 	//TODO: Put this in it's own dedicated file and require it
 	class App{
