@@ -2,6 +2,7 @@
 	//This is where the database functions are stored.
 	require 'lib/db.php';
 
+	//TODO: Put this in it's own dedicated file and require it
 	class App{
 		//Constants
 		public static const $appName = "Social networking website";
@@ -10,6 +11,8 @@
 		//Constructor
 		public __construct() {
 			//Open database
+
+			//TODO: Brainstorm what session variables to look for.
 			//if session profile variable exist
 				//get session entry based off session ID
 				//if not expired
@@ -53,10 +56,13 @@
 		<meat name="keywords" content="" />
 
 		<!--Stylesheets-->
+		<!--TODO: Figure out if I am installing bootstrap, and if I am, put the 2 necessary stylesheets here along with the style tags for any local changes-->
+
 		<!--Scripts-->
+		<!--TODO: Will have an application controller script, powered by jQuery-->
 	</head>
 
 	<body>
-
+		<!--TODO: After page generation functions are in place, generate a page based off of page loading results.-->
 	</body>
 </html>
