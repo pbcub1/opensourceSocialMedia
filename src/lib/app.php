@@ -21,9 +21,8 @@
 	require_once 'generator.php';
 
 	class App{
-		//Constants
-		public static const $appName = "Social networking website";
-		public static const $appVersion = 0.0.1;
+		private $appName;
+		private $appVersion;
 
 		//Constructor
 		public __construct() {
