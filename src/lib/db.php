@@ -32,13 +32,29 @@
 
 			//Else if all the config arguments are set up, use them.
 			}else if(DB_USER != null && DB_HOST != null && isset($pass) && DB_DB != null){
-				$this->open(DB_HOST, DB_USER, DB_PASS, DB_DB);
+				if($this->open(DB_HOST, DB_USER, DB_PASS, DB_DB)){
+					//TODO: Figure out what to do here and write the code.
+				}
 			}else{
 				//TODO: Fill out and throw an exception of class DatabaseException.
 			}
 		}
 
 		private function open($host, $user, $pass, $db){
+			if( !mysql_connect($host, $user, $pass) ){
+				$e = new DatabaseException();
+				$e->$message = 'Database failed to connect.';
+				$e->$source = 'Database class; open function';
+				$e->$time = time();
+				throw $e;
+				return false;
+			} else {
+				//TODO: Select database
+				return true;
+			}
+		}
+
+		public function query($query){
 
 		}
 	}
