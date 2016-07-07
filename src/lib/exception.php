@@ -25,18 +25,17 @@
 		public $time;
 
 		public function displayMessage(){
-			echo 'There was an exception with the message: ' . $message . '; OF TYPE: '. $TYPE . ' AT: ' . $source . '; WHEN: ' . $time . PHP_EOL;
+			return 'There was an exception with the message: ' . $message . '; OF TYPE: '. $TYPE . ' AT: ' . $source . '; WHEN: ' . $time . PHP_EOL;
 		}
 
 		public function storeMessage(){
 			if($TYPE != "DatabaseException"){
-				try{
-					$db = new Database();
-					$result = $db->query('');
-				}catch(DatabaseException){
-					
-				}
+				//TODO: Create a custom database function.
 			}
 		}
+	}
+
+	class DatabaseException extends Exception {
+		public const $TYPE = "Database";
 	}
 ?>
